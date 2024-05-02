@@ -1,7 +1,10 @@
 {
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "namedInputs": {
-    "default": ["{projectRoot}/**/*", "sharedGlobals"],
+    "default": [
+      "{projectRoot}/**/*",
+      "sharedGlobals"
+    ],
     "production": [
       "default",
       "!{projectRoot}/cypress/**/*",
@@ -57,5 +60,13 @@
       }
     }
   },
-  "nxCloudAccessToken": "NDBlZDYxNTItMmJhMC00OGVmLThiZjgtMmI5NjMzMjZlMmFjfHJlYWQtd3JpdGU="
+  "nxCloudAccessToken": "NDBlZDYxNTItMmJhMC00OGVmLThiZjgtMmI5NjMzMjZlMmFjfHJlYWQtd3JpdGU=",
+  "targetDefaults": {
+    "build": {
+      "inputs": [
+        "production",
+        "^production"
+      ]
+    }
+  }
 }
